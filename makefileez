@@ -1,0 +1,8 @@
+mkdir obj
+g++ -g -Wall -c maincpp.cpp -o obj/maincpp.o
+g++ -g -Wall -c players.cpp -o obj/players.o
+g++ -g -Wall -c texture.cpp -o obj/texture.o
+g++ -g -Wall -c board.cpp -o obj/board.o
+g++ -g -Wall -c game.cpp -o obj/game.o
+g++ -g -Wall -c pawns.cpp -o obj/pawns.o
+g++ obj/maincpp.o obj/players.o obj/texture.o obj/board.o obj/game.o obj/pawns.o -Wall -lsfml-graphics -lsfml-window -lsfml-system -o prog
