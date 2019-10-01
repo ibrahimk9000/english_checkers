@@ -22,7 +22,7 @@ spanish checker game (King can move any distance) using SFML library
 
 ### Windows 
 
-- viual studio 2015 or newer
+- visual studio 2015 or newer
 - extract SFML archive ($projectdir/sfml)
 - build project
 
