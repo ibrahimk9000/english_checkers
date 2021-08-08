@@ -1,10 +1,12 @@
 
 #include "texture.h"
-std::string texture::cwd(const std::string &res) {
+std::string texture::cwd(const std::string &res)
+{
 	char currwd[FILENAME_MAX];
 	std::string resu;
-	
-	if (getcwd(currwd, sizeof(currwd)) != NULL) {
+
+	if (getcwd(currwd, sizeof(currwd)) != NULL)
+	{
 		resu = currwd;
 		resu += DEFSL + res;
 	}
@@ -12,30 +14,29 @@ std::string texture::cwd(const std::string &res) {
 }
 void texture::init(const std::string &path)
 {
-	
-try
-{
-	
-	if (!textu.loadFromFile(cwd(path)))  //load texture if path not found throw error
-		throw 1;
 
-}
-catch (int )
-{
-#ifdef _WIN32
-	std::string err = cwd(path);
-	err += " not found";
-	MessageBoxA(NULL,err.c_str(),"Error!", MB_ICONEXCLAMATION | MB_OK);
-	
-#elif __linux__	
-	std::cerr<<cwd(path)<<" not found";
-	
-#endif
-	throw;
-}
+	try
+	{
 
+		if (!textu.loadFromFile(cwd(path))) //load texture if path not found throw error
+			throw 1;
 	}
-sf::Texture *texture::map() {
-	
+	catch (int)
+	{
+#ifdef _WIN32
+		std::string err = cwd(path);
+		err += " not found";
+		MessageBoxA(NULL, err.c_str(), "Error!", MB_ICONEXCLAMATION | MB_OK);
+
+#elif __linux__
+		std::cerr << cwd(path) << " not found";
+
+#endif
+		throw;
+	}
+}
+sf::Texture *texture::map()
+{
+
 	return &textu;
 }

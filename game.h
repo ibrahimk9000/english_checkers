@@ -19,7 +19,6 @@
 #define FONTPATH "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 #endif
 
-
 class Game
 {
 
@@ -35,8 +34,8 @@ private:
 	std::vector<board> boardwhite;
 	sf::Text txt;
 	sf::Font font;
-	
-	texture black_board_texture;    
+
+	texture black_board_texture;
 	texture white_board_texture;
 	texture border;
 
@@ -55,9 +54,9 @@ private:
 	bool initfont();
 	bool textureinit();
 	void swap();
+
 public:
 	Game();
-	
+
 	bool run();
-	
 };

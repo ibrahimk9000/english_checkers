@@ -19,9 +19,8 @@ private:
 	void position();
 
 public:
-	
-	board(int clr, int id_loop, texture * tboard, texture * tborder);
+	board(int clr, int id_loop, texture *tboard, texture *tborder);
 	sf::RectangleShape &display();
-	sf::RectangleShape & display_path();
+	sf::RectangleShape &display_path();
 	sf::Vector2i cord();
 };
