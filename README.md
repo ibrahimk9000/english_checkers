@@ -1,11 +1,12 @@
 
 
-# spanish checker game
-spanish checker game (King can move any distance) using SFML library
+# English checker game
+English checker game  using SFML library.
+
+The can move one position  forward or backward.
 
 
-
-![GIF](https://github.com/ibrahimk9000/test/blob/master/eng_chavi-cut-merged-15681436994.gif)
+![GIF](./scr.gif)
 
 
 
